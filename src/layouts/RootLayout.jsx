@@ -3,9 +3,10 @@ import Header from "./Header";
 
 const RootLayout = () => {
   return (
-    <Header>
+    <>
+      <Header />
       <Outlet />
-    </Header>
+    </>
   );
 };
 

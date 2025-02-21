@@ -5,7 +5,7 @@ const isAuth = false;
 
 const Header = () => {
   return (
-    <div className="w-full h-md flex flex-row space-between bg-green-700">
+    <div className="w-full h-md flex flex-row  bg-green-700">
       <div>홈</div>
       {isAuth ? <MypageButton /> : <AuthButton />}
     </div>
