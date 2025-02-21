@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Login from "../pages/Login";
-import Signup from "../pages/Signup";
-import Mypage from "../pages/Mypage";
-import Test from "../pages/Test";
-import Result from "../pages/Result";
+import Home from "@pages/Home";
+import Login from "@pages/Login";
+import Signup from "@pages/Signup";
+import Mypage from "@pages/Mypage";
+import Test from "@pages/Test";
+import Result from "@pages/Result";
 
 const Router = () => {
   return (
