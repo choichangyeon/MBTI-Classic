@@ -1,7 +1,7 @@
 import AuthButton from "@components/header/AuthButton";
 import MypageButton from "@components/header/MypageButton";
 
-const isAuth = true;
+const isAuth = false;
 
 const Header = () => {
   return (
