@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       height: {
-        sm: "25px",
-        md: "50px",
+        sm: "45px",
+        md: "70px",
         lg: "100px",
       },
     },
