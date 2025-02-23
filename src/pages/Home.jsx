@@ -22,7 +22,7 @@ const Home = () => {
           onClick={() => {
             navigate("/test");
           }}
-          className="h-sm w-lg transition duration-300 shadow-lg hover:text-white hover:border-indigo-300 hover:bg-indigo-300 border-2 rounded-md"
+          className="btn-base h-sm w-lg shadow-lg border-2 "
         >
           테스트하러 가기
         </button>

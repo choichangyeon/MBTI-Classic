@@ -6,14 +6,14 @@ const AuthButton = () => {
     <div className="flex flex-row justify-center align-center gap-5">
       <button
         type="button"
-        className="rounded-md px-2 py-1 transition duration-300 hover:text-white hover:bg-indigo-300"
+        className="btn-base px-2 py-1 "
         onClick={() => navigate("/login")}
       >
         로그인
       </button>
       <button
         type="button"
-        className="rounded-md px-2 py-1 transition duration-300 hover:text-white hover:bg-indigo-300"
+        className="btn-base px-2 py-1"
         onClick={() => navigate("/signup")}
       >
         회원가입
