@@ -1,6 +1,6 @@
-import { POST_CONTENT, POST_TITLE } from "@/data/HomePostCardContent";
-import PostCard from "@components/home/PostCard";
 import { useNavigate } from "react-router-dom";
+import { POST_CONTENT, POST_TITLE } from "@data/HomePostCardContent";
+import PostCard from "@components/home/PostCard";
 
 const Home = () => {
   const navigate = useNavigate();
