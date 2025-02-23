@@ -3,7 +3,7 @@ import PostCard from "@components/home/PostCard";
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex flex-row justify-evenly my-40">
       <PostCard title={POST_TITLE.TEST_TITLE}>
         {POST_CONTENT.TITLE_CONTENT}
       </PostCard>
