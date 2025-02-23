@@ -31,7 +31,7 @@ const Signup = () => {
           value={nickname}
           onChange={(e) => setNickname(e.target.value)}
         />
-        <div className="col-base center-base">
+        <div className="col-base center-base mt-4">
           <button className="btn-base my-2 w-md h-xs" onClick={handleSignup}>
             회원가입
           </button>
