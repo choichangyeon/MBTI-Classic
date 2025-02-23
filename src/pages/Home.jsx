@@ -5,8 +5,11 @@ import PostCard from "@components/home/PostCard";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="col-base justify-center my-40">
-      <div className="flex flex-row justify-evenly">
+    <div className="col-base justify-center my-20 w-full">
+      <div className="pb-20">
+        <p className="font-bold text-center text-5xl">Classic MBTI</p>
+      </div>
+      <div className="row-base justify-evenly">
         <PostCard title={POST_TITLE.TEST_TITLE}>
           {POST_CONTENT.TITLE_CONTENT}
         </PostCard>
