@@ -5,7 +5,7 @@ const MypageButton = () => {
   return (
     <button
       type="button"
-      className="rounded-md px-2 py-1 transition duration-300 hover:text-white hover:bg-indigo-300"
+      className="btn-base px-2 py-1"
       onClick={() => navigate("/mypage")}
     >
       마이페이지

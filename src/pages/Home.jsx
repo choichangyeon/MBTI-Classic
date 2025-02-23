@@ -1,11 +1,11 @@
-import { POST_CONTENT, POST_TITLE } from "@/data/HomePostCardContent";
-import PostCard from "@components/home/PostCard";
 import { useNavigate } from "react-router-dom";
+import { POST_CONTENT, POST_TITLE } from "@data/HomePostCardContent";
+import PostCard from "@components/home/PostCard";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col justify-center my-40">
+    <div className="col-base justify-center my-40">
       <div className="flex flex-row justify-evenly">
         <PostCard title={POST_TITLE.TEST_TITLE}>
           {POST_CONTENT.TITLE_CONTENT}
@@ -22,7 +22,7 @@ const Home = () => {
           onClick={() => {
             navigate("/test");
           }}
-          className="h-sm w-lg transition duration-300 shadow-lg hover:text-white hover:border-indigo-300 hover:bg-indigo-300 border-2 rounded-md"
+          className="btn-base h-sm w-lg shadow-lg border-2 "
         >
           테스트하러 가기
         </button>

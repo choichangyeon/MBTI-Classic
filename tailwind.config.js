@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       height: {
+        xs: "30px",
         sm: "45px",
         md: "70px",
         lg: "100px",
@@ -17,5 +18,23 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        ".btn-base": {
+          "@apply transition duration-300 rounded-md hover:text-white hover:border-indigo-300 hover:bg-indigo-300":
+            {},
+        },
+        ".col-base": {
+          "@apply flex flex-col": {},
+        },
+        ".row-base": {
+          "@apply flex flex-row": {},
+        },
+        ".center-base": {
+          "@apply justify-center items-center": {},
+        },
+      });
+    },
+  ],
 };
