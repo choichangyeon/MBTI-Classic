@@ -11,8 +11,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center my-40">
-      <div className="flex flex-col justify-center items-center h-96 w-80 border ">
+    <div className="col-base center-base my-40">
+      <div className="col-base center-base h-96 w-80 border ">
         <InputForm
           type="text"
           placeholder="아이디"
@@ -31,9 +31,17 @@ const Signup = () => {
           value={nickname}
           onChange={(e) => setNickname(e.target.value)}
         />
-        <button className="btn-base my-2 w-md h-sm" onClick={handleSignup}>
-          회원가입
-        </button>
+        <div className="col-base center-base">
+          <button className="btn-base my-2 w-md h-xs" onClick={handleSignup}>
+            회원가입
+          </button>
+          <p className="text-gray-400">
+            이미 계정이 있으신가요?{" "}
+            <a className="text-indigo-300 hover:underline" href="/login">
+              로그인
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

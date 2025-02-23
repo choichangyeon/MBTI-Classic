@@ -5,7 +5,7 @@ import PostCard from "@components/home/PostCard";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col justify-center my-40">
+    <div className="col-base justify-center my-40">
       <div className="flex flex-row justify-evenly">
         <PostCard title={POST_TITLE.TEST_TITLE}>
           {POST_CONTENT.TITLE_CONTENT}

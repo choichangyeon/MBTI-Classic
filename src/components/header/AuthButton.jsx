@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const AuthButton = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-row justify-center align-center gap-5">
+    <div className="row-base center-base gap-5">
       <button
         type="button"
         className="btn-base px-2 py-1 "
