@@ -11,7 +11,6 @@ const Test = ({ user }) => {
 
   const handleTestSubmit = async (answers) => {
     const mbtiResult = calculateMBTI(answers);
-    console.log(mbtiResult);
     setResult(mbtiResult);
     /* Test 결과는 mbtiResult 라는 변수에 저장이 됩니다. 이 데이터를 어떻게 API 를 이용해 처리 할 지 고민해주세요. */
   };
