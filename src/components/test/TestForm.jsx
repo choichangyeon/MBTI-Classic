@@ -44,10 +44,7 @@ const TestForm = ({ onSubmit }) => {
           </div>
         </div>
       ))}
-      <button
-        type="submit"
-        className="w-full bg-primary-color text-white py-3 rounded-lg font-semibold hover:bg-primary-dark transition duration-300 hover:text-[#FF5A5F]"
-      >
+      <button type="submit" className="btn-base w-full py-3 font-semibold ">
         제출하기
       </button>
     </form>
