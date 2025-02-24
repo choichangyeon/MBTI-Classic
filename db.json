@@ -31,16 +31,23 @@
       "visibility": true
     },
     {
-      "id": "320f",
-      "userId": "changyon99",
-      "nickname": "체리창연",
-      "result": "ISTP",
+      "id": "a010",
+      "userId": null,
+      "nickname": "",
+      "result": "ESFJ",
       "visibility": true
     },
     {
-      "id": "b572",
-      "userId": "changyon99",
-      "nickname": "최창연",
+      "id": "c8bd",
+      "userId": null,
+      "nickname": "",
+      "result": "ESTJ",
+      "visibility": true
+    },
+    {
+      "id": "b708",
+      "userId": null,
+      "nickname": "",
       "result": "ESTJ",
       "visibility": true
     }
