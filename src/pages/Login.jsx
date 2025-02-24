@@ -2,11 +2,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputForm from "@components/common/InputForm";
 import { getUserProfile, login } from "@api/auth";
+import useBearsStore from "@/app/bearStore";
 
 const Login = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
-
+  const setUserData = useBearsStore((state) => state.setUserData);
   const navigate = useNavigate();
 
   const handleSignup = async () => {
@@ -15,9 +16,11 @@ const Login = () => {
       try {
         const result = await getUserProfile(accessToken);
         if (result.id !== id) {
-          userLogin(id, password, navigate);
+          userLogin(id, password, navigate, setUserData);
           return;
         }
+        setUserData(result.id, result.nickname);
+
         alert("로그인에 성공했습니다.");
         navigate("/");
       } catch (e) {
@@ -25,7 +28,7 @@ const Login = () => {
         alert(e.message);
       }
     } else {
-      userLogin(id, password, navigate);
+      userLogin(id, password, navigate, setUserData);
     }
   };
 
@@ -60,7 +63,7 @@ const Login = () => {
   );
 };
 
-const userLogin = async (id, password, navigate) => {
+const userLogin = async (id, password, navigate, setUserData) => {
   try {
     const result = await login({
       id: id,
@@ -68,6 +71,7 @@ const userLogin = async (id, password, navigate) => {
     });
     localStorage.setItem("accessToken", result.accessToken);
 
+    setUserData(result.id, result.nickname);
     alert("로그인에 성공했습니다.");
     navigate("/");
   } catch (e) {

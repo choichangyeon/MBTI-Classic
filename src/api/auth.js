@@ -12,7 +12,6 @@ export const login = async (userData) => {
 };
 
 export const getUserProfile = async (token) => {
-  console.log(token);
   const response = await axios.get(`${API_URL}/user`, {
     headers: {
       "Content-Type": "application/json",
