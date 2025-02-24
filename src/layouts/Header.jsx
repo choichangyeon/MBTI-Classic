@@ -23,6 +23,7 @@ const Header = () => {
         onClick={() => {
           createTestResult({
             userId: "changyon99",
+            nickname: "체리창연",
             result: "ISTP",
             visibility: true,
           });
