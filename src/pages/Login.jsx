@@ -17,6 +17,7 @@ const Login = () => {
       });
 
       console.log(result);
+      localStorage.setItem("accessToken", result.accessToken);
 
       alert("로그인에 성공했습니다.");
       navigate("/");

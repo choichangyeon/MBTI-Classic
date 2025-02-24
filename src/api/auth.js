@@ -11,6 +11,9 @@ export const login = async (userData) => {
   return response.data;
 };
 
-export const getUserProfile = async (token) => {};
+export const getUserProfile = async (token) => {
+  const response = await axios.get(`${API_URL}/user`, token);
+  return response.data;
+};
 
 export const updateProfile = async (formData) => {};
