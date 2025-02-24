@@ -1,27 +1,32 @@
 {
   "testResults": [
     {
-      "id": 1,
-      "result": "ENTP",
-      "visibility": true
-    },
-    {
-      "id": 2,
+      "id": "2",
+      "userId": "test3",
       "result": "INTP",
       "visibility": true
     },
     {
-      "id": 3,
+      "id": "3",
+      "userId": "test13",
       "result": "ESTP",
       "visibility": true
     },
     {
-      "id": 4,
+      "id": "4",
+      "userId": "test23",
       "result": "ENFP",
       "visibility": true
     },
     {
-      "id": 5,
+      "id": "5",
+      "userId": "test12",
+      "result": "ENFP",
+      "visibility": true
+    },
+    {
+      "id": "6",
+      "userId": "test21",
       "result": "ENFP",
       "visibility": true
     }

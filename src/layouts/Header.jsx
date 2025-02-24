@@ -3,7 +3,11 @@ import useBearsStore from "@/app/userStore";
 import { isTokenInvalid } from "@utils/isTokenInvalid";
 import AuthButton from "@components/header/AuthButton";
 import MypageButton from "@components/header/MypageButton";
-import { createTestResult, getTestResults } from "@/api/testResults";
+import {
+  createTestResult,
+  deleteTestResult,
+  getTestResults,
+} from "@/api/testResults";
 
 const Header = () => {
   const userData = useBearsStore((state) => state.userData);
@@ -17,7 +21,7 @@ const Header = () => {
       <button
         className="btn-base"
         onClick={() => {
-          createTestResult({ id: 5, result: "ENFP", visibility: true });
+          deleteTestResult(1);
         }}
       >
         test
@@ -25,6 +29,7 @@ const Header = () => {
       <button
         className="btn-base"
         onClick={() => {
+          // deleteTestResult(5);
           getTestResults();
         }}
       >
