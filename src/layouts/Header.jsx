@@ -1,4 +1,4 @@
-import useBearsStore from "@/app/bearStore";
+import useBearsStore from "@/app/userStore";
 import AuthButton from "@components/header/AuthButton";
 import MypageButton from "@components/header/MypageButton";
 import { useNavigate } from "react-router-dom";

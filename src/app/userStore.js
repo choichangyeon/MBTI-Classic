@@ -5,7 +5,7 @@ const initialUserData = {
   nickname: "",
 };
 
-const useBearsStore = create((set) => ({
+const useUserStore = create((set) => ({
   userData: { ...initialUserData },
 
   // 사용자 데이터를 설정하고 localStorage에 저장
@@ -39,4 +39,4 @@ const useBearsStore = create((set) => ({
   },
 }));
 
-export default useBearsStore;
+export default useUserStore;

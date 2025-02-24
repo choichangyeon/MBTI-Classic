@@ -2,12 +2,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputForm from "@components/common/InputForm";
 import { getUserProfile, login } from "@api/auth";
-import useBearsStore from "@/app/bearStore";
+import useUserStore from "@/app/userStore";
 
 const Login = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
-  const setUserData = useBearsStore((state) => state.setUserData);
+  const setUserData = useUserStore((state) => state.setUserData);
   const navigate = useNavigate();
 
   const handleSignup = async () => {
