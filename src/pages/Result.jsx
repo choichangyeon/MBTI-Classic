@@ -26,7 +26,7 @@ const Result = () => {
     return <div>데이터를 불러오는 중...</div>;
   }
   return (
-    <div>
+    <div className="col-base center-base pt-10">
       {testResults.map((result) => (
         <ResultCard key={result.id} content={result} />
       ))}
