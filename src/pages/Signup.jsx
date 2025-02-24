@@ -1,13 +1,29 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import InputForm from "@components/common/InputForm";
+import { register } from "@api/auth";
 
 const Signup = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [nickname, setNickname] = useState("");
 
-  const handleSignup = () => {
-    console.log({ id, password, nickname });
+  const navigate = useNavigate();
+
+  const handleSignup = async () => {
+    try {
+      const result = await register({
+        id: id,
+        password: password,
+        nickname: nickname,
+      });
+
+      alert("회원가입에 성공하셨습니다! 로그인 후 이용부탁드립니다.");
+      navigate("/login");
+    } catch (e) {
+      console.error(e);
+      alert(e.message);
+    }
   };
 
   return (

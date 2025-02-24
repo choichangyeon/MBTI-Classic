@@ -1,12 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import InputForm from "@components/common/InputForm";
+import { login } from "@api/auth";
+import useUserStore from "@/app/userStore";
 
 const Login = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
+  const setUserData = useUserStore((state) => state.setUserData);
+  const navigate = useNavigate();
 
-  const handleSignup = () => {
-    console.log({ id, password });
+  const handleSignup = async () => {
+    userLogin(id, password, navigate, setUserData);
   };
 
   return (
@@ -38,6 +43,22 @@ const Login = () => {
       </div>
     </div>
   );
+};
+
+const userLogin = async (id, password, navigate, setUserData) => {
+  try {
+    const result = await login({
+      id: id,
+      password: password,
+    });
+
+    setUserData(result);
+    alert("로그인에 성공했습니다.");
+    navigate("/");
+  } catch (e) {
+    console.error(e);
+    alert(e.message);
+  }
 };
 
 export default Login;
