@@ -10,7 +10,8 @@ const useUserStore = create((set) => ({
 
   // 사용자 데이터를 설정하고 localStorage에 저장
   setUserData: (result) => {
-    const newUserData = { id: result.id, nickname: result.nickname };
+    console.log(result);
+    const newUserData = { userId: result.userId, nickname: result.nickname };
     set(() => ({ userData: newUserData }));
 
     // 브라우저 환경 체크
