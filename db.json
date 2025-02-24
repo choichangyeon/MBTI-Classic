@@ -29,6 +29,27 @@
       "userId": "test21",
       "result": "ENFP",
       "visibility": true
+    },
+    {
+      "id": "a010",
+      "userId": null,
+      "nickname": "",
+      "result": "ESFJ",
+      "visibility": true
+    },
+    {
+      "id": "c8bd",
+      "userId": null,
+      "nickname": "",
+      "result": "ESTJ",
+      "visibility": true
+    },
+    {
+      "id": "b708",
+      "userId": null,
+      "nickname": "",
+      "result": "ESTJ",
+      "visibility": true
     }
   ]
 }
