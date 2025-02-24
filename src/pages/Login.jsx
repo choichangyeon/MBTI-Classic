@@ -11,25 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSignup = async () => {
-    const accessToken = localStorage.getItem("accessToken");
-    if (accessToken) {
-      try {
-        const result = await getUserProfile(accessToken);
-        if (result.id !== id) {
-          userLogin(id, password, navigate, setUserData);
-          return;
-        }
-        setUserData(result.id, result.nickname);
-
-        alert("로그인에 성공했습니다.");
-        navigate("/");
-      } catch (e) {
-        console.error(e);
-        alert(e.message);
-      }
-    } else {
-      userLogin(id, password, navigate, setUserData);
-    }
+    userLogin(id, password, navigate, setUserData);
   };
 
   return (
@@ -69,9 +51,8 @@ const userLogin = async (id, password, navigate, setUserData) => {
       id: id,
       password: password,
     });
-    localStorage.setItem("accessToken", result.accessToken);
 
-    setUserData(result.id, result.nickname);
+    setUserData(result);
     alert("로그인에 성공했습니다.");
     navigate("/");
   } catch (e) {
