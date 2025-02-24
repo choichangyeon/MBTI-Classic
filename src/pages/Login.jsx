@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputForm from "@components/common/InputForm";
-import { login } from "@api/auth";
+import { getUserProfile, login } from "@api/auth";
 
 const Login = () => {
   const [id, setId] = useState("");
@@ -10,20 +10,22 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSignup = async () => {
-    try {
-      const result = await login({
-        id: id,
-        password: password,
-      });
-
-      console.log(result);
-      localStorage.setItem("accessToken", result.accessToken);
-
-      alert("로그인에 성공했습니다.");
-      navigate("/");
-    } catch (e) {
-      console.error(e);
-      alert(e.message);
+    const accessToken = localStorage.getItem("accessToken");
+    if (accessToken) {
+      try {
+        const result = await getUserProfile(accessToken);
+        if (result.id !== id) {
+          userLogin(id, password, navigate);
+          return;
+        }
+        alert("로그인에 성공했습니다.");
+        navigate("/");
+      } catch (e) {
+        console.error(e);
+        alert(e.message);
+      }
+    } else {
+      userLogin(id, password, navigate);
     }
   };
 
@@ -56,6 +58,22 @@ const Login = () => {
       </div>
     </div>
   );
+};
+
+const userLogin = async (id, password, navigate) => {
+  try {
+    const result = await login({
+      id: id,
+      password: password,
+    });
+    localStorage.setItem("accessToken", result.accessToken);
+
+    alert("로그인에 성공했습니다.");
+    navigate("/");
+  } catch (e) {
+    console.error(e);
+    alert(e.message);
+  }
 };
 
 export default Login;
