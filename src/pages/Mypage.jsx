@@ -1,29 +1,32 @@
 import { useState } from "react";
 import InputForm from "@components/common/InputForm";
-
-const MOK_USER = {
-  id: "최창연",
-  nickname: "체리창연",
-};
+import useUserStore from "@/app/userStore";
+import { updateProfile } from "@/api/auth";
 
 const Mypage = () => {
-  const [id, setId] = useState(MOK_USER.id);
-  const [nickname, setNickname] = useState(MOK_USER.nickname);
+  const userData = useUserStore((state) => state.userData);
+  const updateUserNickname = useUserStore((state) => state.updateUserNickname);
+  const [userId] = useState(userData.userId);
+  const [nickname, setNickname] = useState(userData.nickname);
 
-  const handleChangeUserNickname = () => {
-    console.log({ id, nickname });
-
-    //닉네임 변경 로직
+  const handleChangeUserNickname = async () => {
+    const formData = {
+      avatar: null,
+      nickname: nickname,
+    };
+    try {
+      const result = await updateProfile(formData);
+      updateUserNickname(result.nickname);
+      alert("닉네임이 변경되었습니다");
+    } catch (e) {
+      console.error(e);
+    }
   };
+
   return (
     <div className="col-base center-base my-40">
       <div className="col-base center-base h-96 w-80 border ">
-        <InputForm
-          type="text"
-          placeholder="아이디"
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-        />
+        <InputForm type="text" placeholder="아이디" value={userId} disabled />
         <InputForm
           type="text"
           placeholder="닉네임"
