@@ -18,10 +18,11 @@ const Signup = () => {
         nickname: nickname,
       });
 
-      alert("회원가입에 성공하셨습니다!");
-      navigate("/");
+      alert("회원가입에 성공하셨습니다! 로그인 후 이용부탁드립니다.");
+      navigate("/login");
     } catch (e) {
       console.error(e);
+      alert(e.message);
     }
   };
 
