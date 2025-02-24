@@ -41,4 +41,8 @@ export const getUserProfile = async () => {
   return data;
 };
 
-export const updateProfile = async (formData) => {};
+export const updateProfile = async (formData) => {
+  const { data } = await axiosInstance.patch(`/profile`, formData);
+
+  return data;
+};

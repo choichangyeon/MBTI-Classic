@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const initialUserData = {
-  id: null,
+  userId: null,
   nickname: "",
 };
 
@@ -10,7 +10,6 @@ const useUserStore = create((set) => ({
 
   // 사용자 데이터를 설정하고 localStorage에 저장
   setUserData: (result) => {
-    console.log(result);
     const newUserData = { userId: result.userId, nickname: result.nickname };
     set(() => ({ userData: newUserData }));
 
@@ -25,6 +24,8 @@ const useUserStore = create((set) => ({
   updateUserNickname: (nickname) =>
     set((state) => {
       const updatedUserData = { ...state.userData, nickname };
+
+      console.log(updatedUserData);
 
       if (typeof window !== "undefined") {
         localStorage.setItem("userData", JSON.stringify(updatedUserData));
