@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputForm from "@components/common/InputForm";
-import { getUserProfile, login } from "@api/auth";
+import { login } from "@api/auth";
 import useUserStore from "@/app/userStore";
 
 const Login = () => {

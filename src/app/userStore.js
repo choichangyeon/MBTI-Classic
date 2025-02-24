@@ -35,7 +35,7 @@ const useUserStore = create((set) => ({
   clearUserData: () => {
     set(() => ({ userData: { ...initialUserData } }));
     if (typeof window !== "undefined") {
-      localStorage.removeItem("userData");
+      localStorage.clear();
     }
   },
 }));
