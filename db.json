@@ -1,0 +1,29 @@
+{
+  "testResults": [
+    {
+      "id": 1,
+      "result": "ENTP",
+      "visibility": true
+    },
+    {
+      "id": 2,
+      "result": "INTP",
+      "visibility": true
+    },
+    {
+      "id": 3,
+      "result": "ESTP",
+      "visibility": true
+    },
+    {
+      "id": 4,
+      "result": "ENFP",
+      "visibility": true
+    },
+    {
+      "id": 5,
+      "result": "ENFP",
+      "visibility": true
+    }
+  ]
+}
