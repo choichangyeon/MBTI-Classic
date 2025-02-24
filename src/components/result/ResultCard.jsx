@@ -1,8 +1,8 @@
 import useUserStore from "@/app/userStore";
-import { MBTI_Descriptions } from "@/data/MBTIDescriptions";
+import { MBTI_Descriptions } from "@data/MBTIDescriptions";
 
-const ResultCard = ({ content }) => {
-  const { userId, result, visibility, nickname } = content;
+const ResultCard = ({ content, onDelete }) => {
+  const { id, userId, result, visibility, nickname } = content;
   const userData = useUserStore((state) => state.userData);
   const isAuthor = userId === userData.userId;
   return (
@@ -13,7 +13,10 @@ const ResultCard = ({ content }) => {
       <p className="line-clamp-4">{MBTI_Descriptions[result]}</p>
       {isAuthor ? (
         <div className="row-base justify-end">
-          <button className="btn-base bg-indigo-300 hover:bg-red-600 text-white w-sm h-xs mx-2">
+          <button
+            onClick={() => onDelete(id)}
+            className="btn-base bg-indigo-300 hover:bg-red-600 text-white w-sm h-xs mt-2 mx-2"
+          >
             삭제
           </button>
           {/* <button>비공개</button> */}

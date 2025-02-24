@@ -11,6 +11,7 @@ const axiosInstance = axios.create({
 
 export const getTestResults = async () => {
   const { data } = await axiosInstance.get();
+  console.log(data);
   return data;
 };
 
