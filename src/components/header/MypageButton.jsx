@@ -29,7 +29,7 @@ const MypageButton = () => {
 
 const handleLogout = (callback, navigate) => {
   Swal.fire({
-    icon: "info",
+    icon: "warning",
     title: "로그아웃 확인",
     text: "로그아웃 하시겠습니까?",
     showCancelButton: true,
