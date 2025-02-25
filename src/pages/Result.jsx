@@ -7,6 +7,7 @@ import {
 import ResultCard from "@components/result/ResultCard";
 import Swal from "sweetalert2";
 import useUserStore from "@/app/userStore";
+import TestButton from "@components/common/TestButton";
 
 const Result = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -108,6 +109,7 @@ const Result = () => {
   }
   return (
     <div className="col-base center-base pt-10">
+      <TestButton />
       {testResults.map((result) => {
         if (result.userId !== userData.userId && !result.visibility) {
           return null;

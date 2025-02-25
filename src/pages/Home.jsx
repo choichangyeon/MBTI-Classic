@@ -1,6 +1,6 @@
 import { POST_CONTENT, POST_TITLE } from "@data/HomePostCardContent";
 import PostCard from "@components/home/PostCard";
-import TestButton from "../components/common/TestButton";
+import TestButton from "@components/common/TestButton";
 
 const Home = () => {
   return (

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const TestButton = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex my-20 justify-center">
+    <div className="flex my-10 justify-center">
       <button
         onClick={() => {
           navigate("/test");
