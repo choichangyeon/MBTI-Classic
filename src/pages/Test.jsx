@@ -7,6 +7,7 @@ import { createTestResult } from "@api/testResults";
 import useUserStore from "@/app/userStore";
 import Swal from "sweetalert2";
 import { formatDate } from "@utils/formatDate";
+import TestButton from "@components/common/TestButton";
 
 const Test = () => {
   const navigate = useNavigate();
@@ -46,7 +47,7 @@ const Test = () => {
             <TestForm onSubmit={handleTestSubmit} />
           </>
         ) : (
-          <div className="col-base center-base pt-5 max-w-screen-sm w-2/3 h-96">
+          <div className="col-base center-base pt-5 max-w-screen-sm w-2/3 h-full">
             <h1 className="text-3xl font-bold text-primary-color mb-6 line-clamp-2">
               테스트 결과: {result}
             </h1>
@@ -56,7 +57,7 @@ const Test = () => {
             </p>
             <button
               onClick={handleNavigateToResults}
-              className="btn-base max-w-screen-sm w-2/3 py-3 font-semibold truncate"
+              className="btn-base justify-center shadow-lg border-2 max-w-screen-sm w-2/3 py-3 font-semibold truncate"
             >
               결과 페이지로 이동하기
             </button>

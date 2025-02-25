@@ -27,7 +27,6 @@ const Signup = () => {
       });
       navigate("/login");
     } catch (e) {
-      console.error(e);
       Swal.fire({
         title: "회원가입 오류",
         text: e.response.data.message,

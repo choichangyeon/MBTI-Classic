@@ -7,6 +7,7 @@ import {
 import ResultCard from "@components/result/ResultCard";
 import Swal from "sweetalert2";
 import useUserStore from "@/app/userStore";
+import TestButton from "@components/common/TestButton";
 
 const Result = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +20,7 @@ const Result = () => {
         const results = await getTestResults();
         setTestResults(results);
       } catch (e) {
-        console.error(e);
+        Swal.fire(`페이지 오류 - ${e}`, "새로고침 부탁드립니다!", "warning");
       } finally {
         setIsLoading(false);
       }
@@ -51,7 +52,6 @@ const Result = () => {
         });
       }
     } catch (e) {
-      console.error(e);
       Swal.fire({
         title: "삭제 오류",
         text: e.response.data.message,
@@ -95,7 +95,6 @@ const Result = () => {
         });
       }
     } catch (e) {
-      console.error(e);
       await Swal.fire({
         title: visibility ? "비공개 처리 오류" : "공개 처리 오류",
         text: e.response?.data?.message || e.message,
@@ -110,6 +109,7 @@ const Result = () => {
   }
   return (
     <div className="col-base center-base pt-10">
+      <TestButton />
       {testResults.map((result) => {
         if (result.userId !== userData.userId && !result.visibility) {
           return null;
