@@ -50,6 +50,13 @@
       "nickname": "창구",
       "result": "ESFJ",
       "visibility": true
+    },
+    {
+      "id": "e24b",
+      "userId": "changu",
+      "nickname": "changu",
+      "result": "ESTJ",
+      "visibility": true
     }
   ]
 }
