@@ -38,12 +38,11 @@ const Router = () => {
               path: "/test",
               element: <Test />,
             },
+            {
+              path: "/result",
+              element: <Result />,
+            },
           ],
-        },
-
-        {
-          path: "/result",
-          element: <Result />,
         },
       ],
     },
