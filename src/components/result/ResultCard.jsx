@@ -24,7 +24,9 @@ const ResultCard = ({ content, onDelete }) => {
           >
             삭제
           </button>
-          {/* <button>비공개</button> */}
+          <button className="btn-base bg-indigo-300 hover:bg-red-600 text-white w-sm h-xs mt-2 mx-2">
+            비공개
+          </button>
         </div>
       ) : null}
     </div>
