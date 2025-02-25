@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import InputForm from "@components/common/InputForm";
 import { login } from "@api/auth";
 import useUserStore from "@/app/userStore";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const [id, setId] = useState("");
@@ -53,11 +54,22 @@ const userLogin = async (id, password, navigate, setUserData) => {
     });
 
     setUserData(result);
-    alert("로그인에 성공했습니다.");
+    Swal.fire({
+      title: "로그인 성공",
+      text: "로그인에 성공하셨습니다!",
+      icon: "success",
+      confirmButtonColor: "#a5b4fc",
+    });
     navigate("/");
   } catch (e) {
     console.error(e);
-    alert(e.message);
+
+    Swal.fire({
+      title: "로그인 오류",
+      text: e.response.data.message,
+      icon: "error",
+      confirmButtonColor: "#a5b4fc",
+    });
   }
 };
 

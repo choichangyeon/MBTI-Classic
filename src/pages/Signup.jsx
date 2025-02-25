@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputForm from "@components/common/InputForm";
 import { register } from "@api/auth";
+import Swal from "sweetalert2";
 
 const Signup = () => {
   const [id, setId] = useState("");
@@ -18,11 +19,21 @@ const Signup = () => {
         nickname: nickname,
       });
 
-      alert("회원가입에 성공하셨습니다! 로그인 후 이용부탁드립니다.");
+      Swal.fire({
+        title: "회원가입 성공",
+        text: "회원가입에 성공하셨습니다! 로그인 후 이용 부탁드립니다.",
+        icon: "success",
+        confirmButtonColor: "#a5b4fc",
+      });
       navigate("/login");
     } catch (e) {
       console.error(e);
-      alert(e.message);
+      Swal.fire({
+        title: "회원가입 오류",
+        text: e.response.data.message,
+        icon: "error",
+        confirmButtonColor: "#a5b4fc",
+      });
     }
   };
 

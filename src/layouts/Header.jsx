@@ -34,7 +34,7 @@ const Header = () => {
       <button
         className="btn-base"
         onClick={() => {
-          getTestResults();
+          test1234();
         }}
       >
         test2
