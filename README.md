@@ -21,7 +21,7 @@
 ###
 
 <div align="center">
-  <img height="300" src="https://s6.ezgif.com/tmp/ezgif-64b2708eec3b5f.gif"  />
+  <img height="300" src="https://github.com/user-attachments/assets/7baf5c9c-90b3-4118-8961-739ea24b1072"  />
 </div>
 
 ###
@@ -31,7 +31,7 @@
 ###
 
 <div align="center">
-  <img height="300" src="https://s6.ezgif.com/tmp/ezgif-68aece2c8f4fc3.gif"  />
+  <img height="300" src="https://github.com/user-attachments/assets/0500817d-f62c-40b1-9fbb-30121e138689"  />
 </div>
 
 ###
@@ -49,7 +49,7 @@
 ###
 
 <div align="center">
-  <img height="300" src="https://s8.ezgif.com/tmp/ezgif-8fc7045350e964.gif"  />
+  <img height="300" src="https://github.com/user-attachments/assets/0d197349-b414-4773-a3b9-e3fe7a9f4d59"  />
 </div>
 
 ###
@@ -59,7 +59,7 @@
 ###
 
 <div align="center">
-  <img height="300" src="https://s8.ezgif.com/tmp/ezgif-891953af4d8192.gif"  />
+  <img height="300" src="https://github.com/user-attachments/assets/07510b8b-babd-4b4c-9209-461b3dbb7e9b"  />
 </div>
 
 ###
@@ -69,7 +69,7 @@
 ###
 
 <div align="center">
-  <img height="300" src="https://s8.ezgif.com/tmp/ezgif-8e968790a615c1.gif"  />
+  <img height="300" src="https://github.com/user-attachments/assets/87dd6fe2-7fd8-4e00-b436-431165cdd07d"  />
 </div>
 
 ###
@@ -107,6 +107,6 @@
 
 ###
 
-<h4 align="left">[아니..웨? 적용이 않뒈..?](https://velog.io/@changyon99/%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-%EC%95%84%EB%8B%88..%EC%9B%A8%EC%A0%81%EC%9A%A9%EC%9D%B4%EC%95%8A%EB%92%88)</h4>
+#### [아니..웨? 적용이 않뒈..?](https://velog.io/@changyon99/%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-%EC%95%84%EB%8B%88..%EC%9B%A8%EC%A0%81%EC%9A%A9%EC%9D%B4%EC%95%8A%EB%92%88)</h4>
 
 ###
