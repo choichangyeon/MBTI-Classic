@@ -20,11 +20,11 @@ export const createTestResult = async (resultData) => {
 };
 
 export const deleteTestResult = async (id) => {
-  const { data } = await axiosInstance.delete(`${id}`);
+  const { data } = await axiosInstance.delete(`/${id}`);
   return data;
 };
 
 export const updateTestResultVisibility = async (id, visibility) => {
-  const { data } = await axiosInstance.patch(`${id}`, { visibility });
+  const { data } = await axiosInstance.patch(`/${id}`, { visibility });
   return data;
 };
