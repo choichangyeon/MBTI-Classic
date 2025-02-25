@@ -110,3 +110,13 @@
 #### [아니..웨? 적용이 않뒈..?](https://velog.io/@changyon99/%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-%EC%95%84%EB%8B%88..%EC%9B%A8%EC%A0%81%EC%9A%A9%EC%9D%B4%EC%95%8A%EB%92%88)</h4>
 
 ###
+
+<h2 align="left">🤔 회고록</h2>
+
+###
+
+#### [이번에 있었던 일들을 토대로 잘 성장해내면 그것또한 좋지 아니한가?](https://velog.io/@changyon99/%ED%9A%8C%EA%B3%A0%EB%A1%9D-ClassicMBTI)</h4>
+
+###
+
+
