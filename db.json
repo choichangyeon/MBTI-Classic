@@ -1,64 +1,6 @@
 {
   "testResults": [
     {
-      "id": "2",
-      "userId": "test3",
-      "result": "INTP",
-      "visibility": true
-    },
-    {
-      "id": "3",
-      "userId": "test13",
-      "result": "ESTP",
-      "visibility": true
-    },
-    {
-      "id": "4",
-      "userId": "test23",
-      "result": "ENFP",
-      "visibility": true
-    },
-    {
-      "id": "5",
-      "userId": "test12",
-      "result": "ENFP",
-      "visibility": true
-    },
-    {
-      "id": "6",
-      "userId": "test21",
-      "result": "ENFP",
-      "visibility": true
-    },
-    {
-      "id": "a010",
-      "userId": null,
-      "nickname": "",
-      "result": "ESFJ",
-      "visibility": true
-    },
-    {
-      "id": "c8bd",
-      "userId": null,
-      "nickname": "",
-      "result": "ESTJ",
-      "visibility": true
-    },
-    {
-      "id": "e24b",
-      "userId": "changu",
-      "nickname": "changu",
-      "result": "ESTJ",
-      "visibility": true
-    },
-    {
-      "id": "ea5c",
-      "userId": "changu",
-      "nickname": "changu",
-      "result": "ISTJ",
-      "visibility": true
-    },
-    {
       "id": "8aff",
       "userId": "changyon99",
       "nickname": "체리창연",

@@ -62,8 +62,6 @@ const userLogin = async (id, password, navigate, setUserData) => {
     });
     navigate("/");
   } catch (e) {
-    console.error(e);
-
     Swal.fire({
       title: "로그인 오류",
       text: e.response.data.message,

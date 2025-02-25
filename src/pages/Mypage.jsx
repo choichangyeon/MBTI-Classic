@@ -24,7 +24,6 @@ const Mypage = () => {
         confirmButtonColor: "#a5b4fc",
       });
     } catch (e) {
-      console.error(e);
       Swal.fire({
         title: "닉네임 변경 오류",
         text: e.response.data.message,

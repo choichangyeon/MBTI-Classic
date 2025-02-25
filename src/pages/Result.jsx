@@ -19,7 +19,7 @@ const Result = () => {
         const results = await getTestResults();
         setTestResults(results);
       } catch (e) {
-        console.error(e);
+        Swal.fire(`페이지 오류 - ${e}`, "새로고침 부탁드립니다!", "warning");
       } finally {
         setIsLoading(false);
       }
@@ -51,7 +51,6 @@ const Result = () => {
         });
       }
     } catch (e) {
-      console.error(e);
       Swal.fire({
         title: "삭제 오류",
         text: e.response.data.message,
@@ -95,7 +94,6 @@ const Result = () => {
         });
       }
     } catch (e) {
-      console.error(e);
       await Swal.fire({
         title: visibility ? "비공개 처리 오류" : "공개 처리 오류",
         text: e.response?.data?.message || e.message,
