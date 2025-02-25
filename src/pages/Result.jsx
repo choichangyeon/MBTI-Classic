@@ -11,7 +11,7 @@ import useUserStore from "@/app/userStore";
 const Result = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [testResults, setTestResults] = useState([]);
-  const userData = useUserStore((state) => state.userData);
+  const { userData } = useUserStore();
 
   useEffect(() => {
     const fetchTestResults = async () => {

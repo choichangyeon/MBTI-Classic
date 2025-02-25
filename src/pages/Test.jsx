@@ -11,7 +11,7 @@ import { formatDate } from "@utils/formatDate";
 const Test = () => {
   const navigate = useNavigate();
   const [result, setResult] = useState(null);
-  const userData = useUserStore((state) => state.userData);
+  const { userData } = useUserStore();
 
   const handleTestSubmit = async (answers) => {
     const mbtiResult = calculateMBTI(answers);

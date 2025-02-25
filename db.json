@@ -45,13 +45,6 @@
       "visibility": true
     },
     {
-      "id": "2801",
-      "userId": "changyon99",
-      "nickname": "창구",
-      "result": "ESFJ",
-      "visibility": true
-    },
-    {
       "id": "e24b",
       "userId": "changu",
       "nickname": "changu",
@@ -66,33 +59,12 @@
       "visibility": true
     },
     {
-      "id": "9fcd",
+      "id": "8aff",
       "userId": "changyon99",
-      "nickname": "창구",
-      "result": "ESFJ",
-      "visibility": false
-    },
-    {
-      "id": "8199",
-      "userId": "changyon99",
-      "nickname": "창구",
-      "result": "INTP",
-      "visibility": true
-    },
-    {
-      "id": "0a50",
-      "userId": "changyon99",
-      "nickname": "창구",
-      "result": "ESTJ",
-      "visibility": true
-    },
-    {
-      "id": "2d2e",
-      "userId": "changyon99",
-      "nickname": "창구",
-      "result": "ESTP",
-      "visibility": false,
-      "createAt": "2025년 2월 25일 11시 31분"
+      "nickname": "체리창연",
+      "result": "ISTJ",
+      "visibility": true,
+      "createAt": "2025년 2월 25일 12시 13분"
     }
   ]
 }
