@@ -1,0 +1,20 @@
+{
+  "testResults": [
+    {
+      "id": "8aff",
+      "userId": "changyon99",
+      "nickname": "체리창연",
+      "result": "ISTJ",
+      "visibility": true,
+      "createAt": "2025년 2월 25일 12시 13분"
+    },
+    {
+      "id": "285a",
+      "userId": "changyon99",
+      "nickname": "체리",
+      "result": "ISFJ",
+      "visibility": true,
+      "createAt": "2025년 2월 25일 13시 11분"
+    }
+  ]
+}
