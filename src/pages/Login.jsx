@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 const Login = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
-  const setUserData = useUserStore((state) => state.setUserData);
+  const { setUserData } = useUserStore();
   const navigate = useNavigate();
 
   const handleSignup = async () => {

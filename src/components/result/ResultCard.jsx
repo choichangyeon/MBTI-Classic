@@ -3,7 +3,7 @@ import { MBTI_Descriptions } from "@data/MBTIDescriptions";
 
 const ResultCard = ({ content, onDelete, onChangeVisibility }) => {
   const { id, userId, result, visibility, nickname, createAt } = content;
-  const userData = useUserStore((state) => state.userData);
+  const { userData } = useUserStore();
   const isAuthor = userId === userData.userId;
   return (
     <div className="col-base min-w-min w-3/5 h-52 cursor-pointer shadow-lg hover:-translate-y-2 transition duration-300 border rounded-md my-5 py-5 px-4 bg-amber-50">

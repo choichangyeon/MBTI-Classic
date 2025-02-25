@@ -5,8 +5,7 @@ import { updateProfile } from "@/api/auth";
 import Swal from "sweetalert2";
 
 const Mypage = () => {
-  const userData = useUserStore((state) => state.userData);
-  const updateUserNickname = useUserStore((state) => state.updateUserNickname);
+  const { userData, updateUserNickname } = useUserStore();
   const [userId] = useState(userData.userId);
   const [nickname, setNickname] = useState(userData.nickname);
 

@@ -5,10 +5,9 @@ import Swal from "sweetalert2";
 
 function ProtectedRouter() {
   const { pathname } = useLocation();
-  const clearUserData = useUserStore((state) => state.clearUserData);
-  const token = localStorage.getItem("accessToken");
+  const { clearUserData, accessToken } = useUserStore();
 
-  if (isTokenInvalid(token)) {
+  if (isTokenInvalid(accessToken)) {
     clearUserData();
     Swal.fire({
       icon: "warning",

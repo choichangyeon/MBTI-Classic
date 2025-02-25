@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const MypageButton = () => {
   const navigate = useNavigate();
-  const clearUserData = useUserStore((state) => state.clearUserData);
+  const { clearUserData } = useUserStore();
   return (
     <div className="row-base center-base gap-5">
       <button
