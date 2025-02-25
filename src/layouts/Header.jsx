@@ -3,11 +3,6 @@ import useBearsStore from "@/app/userStore";
 import { isTokenInvalid } from "@utils/isTokenInvalid";
 import AuthButton from "@components/header/AuthButton";
 import MypageButton from "@components/header/MypageButton";
-import {
-  deleteTestResult,
-  getTestResults,
-  createTestResult,
-} from "@/api/testResults";
 
 const Header = () => {
   const userData = useBearsStore((state) => state.userData);
@@ -17,28 +12,12 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <div className="w-full h-md row-base justify-between items-center px-10 bg-amber-100 shadow-md relative z-10">
-      <button onClick={() => navigate("/")}>홈</button>
-      <button
-        className="btn-base"
-        onClick={() => {
-          createTestResult({
-            userId: "changyon99",
-            nickname: "체리창연",
-            result: "ISTP",
-            visibility: true,
-          });
-        }}
-      >
-        test
-      </button>
-      <button
-        className="btn-base"
-        onClick={() => {
-          test1234();
-        }}
-      >
-        test2
-      </button>
+      <div className="row-base">
+        <button className="mr-5" onClick={() => navigate("/")}>
+          홈
+        </button>
+        <button onClick={() => navigate("/result")}>결과 페이지</button>
+      </div>
       {isAuth ? <AuthButton /> : <MypageButton />}
     </div>
   );
