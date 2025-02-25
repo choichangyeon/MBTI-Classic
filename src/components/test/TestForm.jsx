@@ -34,12 +34,12 @@ const TestForm = ({ onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="col-base center-base space-y-6 p-6 bg-white rounded-lg"
+      className="col-base center-base w-full space-y-6 p-6 bg-white rounded-lg"
     >
       {questions.map((q, index) => (
         <div
           key={q.id}
-          className="border col-base max-w-screen-sm w-2/3 h-50 shadow-lg rounded-md my-5 py-5 px-4 mb-6"
+          className="border col-base max-w-screen-md w-full h-50 shadow-lg rounded-md my-5 py-5 px-4 mb-6"
         >
           <p className="font-semibold text-lg mb-3 line-clamp-2">
             {q.question}
