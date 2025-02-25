@@ -48,7 +48,7 @@ const Test = () => {
             <h1 className="text-3xl font-bold text-primary-color mb-6 line-clamp-2">
               테스트 결과: {result}
             </h1>
-            <p className="text-lg text-gray-700 mb-6 line-clamp-4">
+            <p className="text-lg text-gray-700 mb-6 line-clamp-5">
               {MBTI_Descriptions[result] ||
                 "해당 성격 유형에 대한 설명이 없습니다."}
             </p>
