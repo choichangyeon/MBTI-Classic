@@ -6,6 +6,7 @@ import { MBTI_Descriptions } from "@data/MBTIDescriptions";
 import { createTestResult } from "@api/testResults";
 import useUserStore from "@/app/userStore";
 import Swal from "sweetalert2";
+import { formatDate } from "@utils/formatDate";
 
 const Test = () => {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ const Test = () => {
       nickname: userData.nickname,
       result: mbtiResult,
       visibility: true,
+      createAt: formatDate(Date.now()),
     });
   };
 

@@ -73,13 +73,6 @@
       "visibility": true
     },
     {
-      "id": "a917",
-      "userId": "changyon99",
-      "nickname": "창구",
-      "result": "INFJ",
-      "visibility": true
-    },
-    {
       "id": "8199",
       "userId": "changyon99",
       "nickname": "창구",
@@ -92,6 +85,14 @@
       "nickname": "창구",
       "result": "ESTJ",
       "visibility": true
+    },
+    {
+      "id": "2d2e",
+      "userId": "changyon99",
+      "nickname": "창구",
+      "result": "ESTP",
+      "visibility": true,
+      "createAt": "2025년 2월 25일 11시 31분"
     }
   ]
 }
