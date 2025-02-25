@@ -70,7 +70,7 @@
       "userId": "changyon99",
       "nickname": "창구",
       "result": "ESFJ",
-      "visibility": true
+      "visibility": false
     },
     {
       "id": "8199",
@@ -91,7 +91,7 @@
       "userId": "changyon99",
       "nickname": "창구",
       "result": "ESTP",
-      "visibility": true,
+      "visibility": false,
       "createAt": "2025년 2월 25일 11시 31분"
     }
   ]

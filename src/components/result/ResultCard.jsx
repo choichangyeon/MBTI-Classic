@@ -1,7 +1,7 @@
 import useUserStore from "@/app/userStore";
 import { MBTI_Descriptions } from "@data/MBTIDescriptions";
 
-const ResultCard = ({ content, onDelete }) => {
+const ResultCard = ({ content, onDelete, onChangeVisibility }) => {
   const { id, userId, result, visibility, nickname, createAt } = content;
   const userData = useUserStore((state) => state.userData);
   const isAuthor = userId === userData.userId;
@@ -24,8 +24,11 @@ const ResultCard = ({ content, onDelete }) => {
           >
             삭제
           </button>
-          <button className="btn-base bg-indigo-300 hover:bg-red-600 text-white w-sm h-xs mt-2 mx-2">
-            비공개
+          <button
+            onClick={() => onChangeVisibility(id, visibility)}
+            className="btn-base bg-indigo-300 hover:bg-orange-300 text-white w-sm h-xs mt-2 mx-2"
+          >
+            {visibility ? "비공개" : "공개"}
           </button>
         </div>
       ) : null}
