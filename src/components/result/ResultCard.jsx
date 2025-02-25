@@ -6,12 +6,12 @@ const ResultCard = ({ content, onDelete }) => {
   const userData = useUserStore((state) => state.userData);
   const isAuthor = userId === userData.userId;
   return (
-    <div className="col-base w-3/5 h-52 cursor-pointer shadow-lg hover:-translate-y-2 transition duration-300 border rounded-md my-5 py-5 px-4 bg-amber-50">
+    <div className="col-base min-w-min w-3/5 h-52 cursor-pointer shadow-lg hover:-translate-y-2 transition duration-300 border rounded-md my-5 py-5 px-4 bg-amber-50">
       <div className="row-base items-center justify-between">
-        <h1 className="text-lg font-bold mb-1">
+        <h1 className="text-lg font-bold mb-1 truncate">
           {result} - {nickname}
         </h1>
-        <p className="text-xs text-slate-600 text-right">
+        <p className="text-xs text-slate-600 text-right truncate">
           테스트 일자: {createAt}
         </p>
       </div>
