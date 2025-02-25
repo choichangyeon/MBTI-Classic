@@ -33,17 +33,17 @@ const Result = () => {
         confirmButtonColor: "#a5b4fc",
         cancelButtonColor: "#fc7531",
       });
-      if (result.isConfirmed)
-        if (result.isConfirmed) {
-          const { nickname } = await deleteTestResult(id);
-          setTestResults((prev) => prev.filter((result) => result.id !== id));
-          await Swal.fire({
-            title: "삭제 완료",
-            text: `${nickname}님의 테스트 결과를 삭제했습니다.`,
-            icon: "success",
-            confirmButtonColor: "#a5b4fc",
-          });
-        }
+
+      if (result.isConfirmed) {
+        const { nickname } = await deleteTestResult(id);
+        setTestResults((prev) => prev.filter((result) => result.id !== id));
+        await Swal.fire({
+          title: "삭제 완료",
+          text: `${nickname}님의 테스트 결과를 삭제했습니다.`,
+          icon: "success",
+          confirmButtonColor: "#a5b4fc",
+        });
+      }
     } catch (e) {
       console.error(e);
       Swal.fire({

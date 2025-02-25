@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { questions } from "@data/Questions";
+import Swal from "sweetalert2";
 
 const TestForm = ({ onSubmit }) => {
   const [answers, setAnswers] = useState(
@@ -12,9 +13,22 @@ const TestForm = ({ onSubmit }) => {
     setAnswers(newAnswers);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit(answers);
+    const result = await Swal.fire({
+      icon: "info",
+      title: "테스트 완료 확인",
+      text: "테스트를 완료 하시겠습니까?",
+      showCancelButton: true,
+      confirmButtonText: "예",
+      cancelButtonText: "아니오",
+      confirmButtonColor: "#a5b4fc",
+      cancelButtonColor: "#fc7531",
+    });
+
+    if (result.isConfirmed) {
+      onSubmit(answers);
+    }
   };
 
   return (
