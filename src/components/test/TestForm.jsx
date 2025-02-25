@@ -32,17 +32,27 @@ const TestForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 p-6 bg-white rounded-lg">
+    <form
+      onSubmit={handleSubmit}
+      className="col-base center-base w-full space-y-6 p-6 bg-white rounded-lg"
+    >
       {questions.map((q, index) => (
-        <div key={q.id} className="mb-6">
-          <p className="font-semibold text-lg mb-3">{q.question}</p>
+        <div
+          key={q.id}
+          className="border col-base max-w-screen-md w-full h-50 shadow-lg rounded-md my-5 py-5 px-4 mb-6"
+        >
+          <p className="font-semibold text-lg mb-3 line-clamp-2">
+            {q.question}
+          </p>
           <div className="space-y-2">
             {q.options.map((option, i) => (
               <label
                 key={i}
-                className={`block p-3 border rounded-lg cursor-pointer transition-colors duration-300 ${
-                  answers[index]?.answer === option ? "bg-gray-100" : ""
-                } hover:bg-gray-100`}
+                className={`block p-3 border rounded-lg cursor-pointer truncate transition-colors duration-300 ${
+                  answers[index]?.answer === option
+                    ? "bg-indigo-300 text-white"
+                    : ""
+                } hover:bg-indigo-100`}
               >
                 <input
                   type="radio"
@@ -51,6 +61,7 @@ const TestForm = ({ onSubmit }) => {
                   checked={answers[index]?.answer === option}
                   onChange={() => handleChange(index, option)}
                   className="mr-2 text-primary-color"
+                  required
                 />
                 {option}
               </label>
@@ -58,7 +69,10 @@ const TestForm = ({ onSubmit }) => {
           </div>
         </div>
       ))}
-      <button type="submit" className="btn-base w-full py-3 font-semibold ">
+      <button
+        type="submit"
+        className="btn-base max-w-screen-sm w-2/3 py-3 font-semibold "
+      >
         제출하기
       </button>
     </form>
