@@ -41,8 +41,10 @@ const TestForm = ({ onSubmit }) => {
               <label
                 key={i}
                 className={`block p-3 border rounded-lg cursor-pointer transition-colors duration-300 ${
-                  answers[index]?.answer === option ? "bg-gray-100" : ""
-                } hover:bg-gray-100`}
+                  answers[index]?.answer === option
+                    ? "bg-indigo-300 text-white"
+                    : ""
+                } hover:bg-indigo-100`}
               >
                 <input
                   type="radio"
@@ -51,6 +53,7 @@ const TestForm = ({ onSubmit }) => {
                   checked={answers[index]?.answer === option}
                   onChange={() => handleChange(index, option)}
                   className="mr-2 text-primary-color"
+                  required
                 />
                 {option}
               </label>
